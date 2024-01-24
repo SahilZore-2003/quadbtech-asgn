@@ -1,0 +1,23 @@
+.movie-card{
+    cursor: pointer;
+    background-color: var(--dark-gray);
+    border-radius: 10px;
+
+    span{
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+        max-height: 333px;
+        object-fit: cover;
+    }
+
+    h3{
+        margin-top: 1rem;
+        color: var(--white);
+        text-align: center;
+        font-weight: 400;
+        padding-bottom: 1rem;
+    }
+}

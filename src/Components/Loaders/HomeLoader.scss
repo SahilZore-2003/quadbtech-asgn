@@ -1,0 +1,29 @@
+.home-loader {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    background-color: black;
+    padding: 3%;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    @media (max-width:1000px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:800px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:500px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    >span {
+        min-height: 200px;
+
+        .react-loading-skeleton {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

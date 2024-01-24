@@ -1,0 +1,43 @@
+.banner {
+    height: calc(100vh - 73px);
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.73) 62%, rgba(2, 2, 20, 0.8) 99%);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        // filter: blur(8px);
+    }
+
+    .bannerinfo {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5%;
+
+        h1 {
+            font-size: 4rem;
+            color: var(--white);
+            // -webkit-text-stroke: 2px  var(--white);
+            margin-bottom: 1rem;
+        }
+
+        button {
+            color: var(--white);
+            background-color: var(--red);
+            border-radius: 20px;
+            padding: 1rem 2rem;
+            border: none;
+            outline: none;
+        }
+    }
+}

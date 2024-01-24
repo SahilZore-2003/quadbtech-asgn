@@ -1,0 +1,64 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 5%;
+    // background: var(--black);
+    color: var(--white);
+    border-bottom: 1px solid var(--black);
+
+    .logo {
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .ticket {
+        color: var(--red);
+        font-size: 1.5rem;
+        transform: translateY(10%);
+    }
+
+    .links {
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .activenav {
+            font-weight: 600;
+            color: var(--red);
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            // overflow: hidden;
+            padding: 0rem .5rem;
+            transition: all .3s linear;
+
+
+
+            &:hover {
+                color: var(--red);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &::after {
+                transition: .3s linear;
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                height: 2px;
+                background: var(--red);
+                width: 0%;
+                border-radius: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.book-show {
+    position: fixed;
+    inset: 0;
+    background-color: var(--fixed);
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    transition: .2s linear;
+
+    .closeIcon {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        color: var(--orange);
+        font-size: 2rem;
+
+    }
+
+    .ticket {
+        background-color: var(--white);
+        width: 90%;
+        max-width: 500px;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: .5rem;
+            border-bottom: .5px solid var(--dark-gray);
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .left {
+                h3 {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: #363a47;
+                }
+
+                p,
+                small {
+                    font-size: .8rem;
+                }
+            }
+
+
+        }
+
+        .middle {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+
+            small {
+                font-weight: 400;
+                color: #363a47;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+
+        .userInfo {
+
+            margin-top: 1.5rem;
+
+            .input {
+                position: relative;
+                margin-top: 1rem;
+
+                input {
+                    width: 100%;
+                    border: 1px solid var(--orange);
+                    padding: .5rem;
+
+                    &:focus {
+                        outline: 1px solid var(--orange);
+                    }
+
+
+
+                    &:focus+label {
+                        top: 0%;
+                        left: 2%;
+                        background-color: var(--white);
+                        color: var(--orange);
+                        font-size: .6rem;
+
+                    }
+
+                    &:valid+label {
+                        left: 2%;
+                        top: 0%;
+                        background-color: var(--white);
+                        color: var(--orange);
+                        font-size: .6rem;
+
+                    }
+                }
+
+                label {
+                    // padding-inline:1rem ;
+                    transition: .3s linear;
+                    font-size: .8rem;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 2%;
+                    pointer-events: none;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        button {
+            margin-top: 1rem;
+            border-radius: 10px;
+            background: var(--orange);
+            padding: .5rem;
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            color: var(--white);
+            border: none;
+            outline: none;
+            transition: .2s linear;
+
+            &:hover {
+                opacity: .8;
+                cursor: pointer;
+            }
+        }
+    }
+}
